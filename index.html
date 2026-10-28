@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="sr-RS">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SEO audit — stolarija-pvc.rs</title>
+<meta name="description" content="SEO audit sajta stolarija-pvc.rs (Majstor Joca, Beograd): tehnički nalazi, poređenje sa konkurencijom, plan rada i ponuda za promociju.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f7f9;
+  --surface:#ffffff;
+  --surface-2:#f0f2f5;
+  --ink:#131a24;
+  --ink-2:#4a5565;
+  --ink-3:#7b8798;
+  --line:#e2e6ec;
+  --accent:#0b5fd8;
+  --accent-soft:#e7efff;
+  --danger:#c7301f;
+  --danger-soft:#fdecea;
+  --warn:#9a6300;
+  --warn-soft:#fdf3e0;
+  --ok:#0f7a45;
+  --ok-soft:#e6f5ec;
+  --radius:14px;
+  --maxw:1080px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1319;
+    --surface:#151c25;
+    --surface-2:#1b232e;
+    --ink:#eef2f7;
+    --ink-2:#b2bdcc;
+    --ink-3:#8290a3;
+    --line:#26303d;
+    --accent:#5a9bff;
+    --accent-soft:#17263d;
+    --danger:#ff8071;
+    --danger-soft:#33201d;
+    --warn:#e9b765;
+    --warn-soft:#2e2619;
+    --ok:#5fd396;
+    --ok-soft:#142a1f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1319;--surface:#151c25;--surface-2:#1b232e;--ink:#eef2f7;--ink-2:#b2bdcc;--ink-3:#8290a3;
+  --line:#26303d;--accent:#5a9bff;--accent-soft:#17263d;--danger:#ff8071;--danger-soft:#33201d;
+  --warn:#e9b765;--warn-soft:#2e2619;--ok:#5fd396;--ok-soft:#142a1f;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+  font-size:16px;line-height:1.65;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+a{color:var(--accent)}
+
+/* ---------- hero ---------- */
+.hero{
+  background:linear-gradient(160deg,#0b1a33 0%,#123a73 55%,#0b5fd8 100%);
+  color:#fff;padding:52px 0 44px;
+}
+.hero .tag{
+  display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:700;background:rgba(255,255,255,.14);padding:6px 12px;border-radius:999px;
+}
+.hero h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:18px 0 10px;font-weight:800;letter-spacing:-.02em}
+.hero .dom{font-size:clamp(17px,2.4vw,20px);font-weight:600;color:#bcd4ff}
+.hero p{color:#d6e4ff;max-width:58ch;margin:14px 0 0}
+.hero .meta{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px 26px;font-size:13.5px;color:#a9c4f0}
+.hero .meta b{color:#fff;font-weight:600}
+
+/* ---------- blocks ---------- */
+section{padding:44px 0}
+section + section{border-top:1px solid var(--line)}
+h2{font-size:clamp(21px,3.2vw,28px);line-height:1.25;margin:0 0 6px;font-weight:750;letter-spacing:-.015em}
+.sub{color:var(--ink-3);margin:0 0 24px;font-size:15px}
+h3{font-size:17.5px;margin:28px 0 8px;font-weight:650}
+p{margin:0 0 14px}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin:5px 0}
+.lead{font-size:17.5px;color:var(--ink-2)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:12px;margin:0 0 8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.card .n{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.card .l{font-size:13.5px;color:var(--ink-3);margin-top:6px}
+.card.red .n{color:var(--danger)}
+.card.amber .n{color:var(--warn)}
+.card.green .n{color:var(--ok)}
+
+.box{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:20px 22px;margin:18px 0}
+.box.accent{background:var(--accent-soft);border-color:transparent}
+.box.red{background:var(--danger-soft);border-color:transparent}
+.box h3{margin-top:0}
+
+table{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:16px 0}
+th,td{padding:11px 13px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--surface-2);font-weight:650;font-size:13px;letter-spacing:.02em;color:var(--ink-2)}
+tr:last-child td{border-bottom:none}
+td code,p code,li code{background:var(--surface-2);padding:1px 6px;border-radius:5px;font-size:13px;
+  font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+.scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.scroll table{min-width:620px;margin:16px 0}
+
+.pill{display:inline-block;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:999px;
+  text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+.pill.crit{background:var(--danger-soft);color:var(--danger)}
+.pill.med{background:var(--warn-soft);color:var(--warn)}
+.pill.low{background:var(--surface-2);color:var(--ink-3)}
+.pill.ok{background:var(--ok-soft);color:var(--ok)}
+
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:720px){.two{grid-template-columns:1fr}}
+
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.vs > div{padding:20px 22px}
+.vs .them{border-left:1px solid var(--line);background:var(--surface-2)}
+@media(max-width:720px){.vs{grid-template-columns:1fr}.vs .them{border-left:none;border-top:1px solid var(--line)}}
+.vs h4{margin:0 0 10px;font-size:14px;text-transform:uppercase;letter-spacing:.07em;color:var(--ink-3)}
+.vs .big{font-size:34px;font-weight:800;line-height:1;margin:0 0 10px;letter-spacing:-.02em}
+.vs ul{margin:0;padding-left:20px;font-size:14.5px;color:var(--ink-2)}
+
+.timeline{border-left:2px solid var(--line);margin:22px 0 0;padding-left:0}
+.tl{position:relative;padding:0 0 26px 26px}
+.tl:last-child{padding-bottom:4px}
+.tl::before{content:"";position:absolute;left:-7px;top:7px;width:12px;height:12px;border-radius:50%;
+  background:var(--accent);border:3px solid var(--bg)}
+.tl .when{font-size:12.5px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--accent)}
+.tl h3{margin:3px 0 7px;font-size:17px}
+.tl ul{margin:0;padding-left:20px;font-size:14.5px;color:var(--ink-2)}
+
+.price{background:var(--surface);border:2px solid var(--accent);border-radius:18px;padding:28px;margin:20px 0}
+.price .amt{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.price .amt .v{font-size:46px;font-weight:800;letter-spacing:-.03em;line-height:1}
+.price .amt .p{color:var(--ink-3);font-size:15px}
+.price .note{font-size:14px;color:var(--ink-3);margin-top:4px}
+.incl{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:22px}
+.incl .i{background:var(--surface-2);border-radius:10px;padding:14px 16px}
+.incl .i b{display:block;font-size:14.5px;margin-bottom:3px}
+.incl .i span{font-size:13.5px;color:var(--ink-2)}
+
+.kw{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:14px}
+.kw .g{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px}
+.kw .g b{font-size:14px;display:block;margin-bottom:8px}
+.kw .g ul{margin:0;padding-left:18px;font-size:14px;color:var(--ink-2)}
+.kw .g .intent{font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-3);
+  font-weight:700;margin-bottom:6px}
+
+footer{background:var(--surface);border-top:1px solid var(--line);padding:40px 0;margin-top:0}
+footer .f{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:flex-start}
+footer a{font-weight:600;text-decoration:none}
+footer .small{font-size:13px;color:var(--ink-3)}
+
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 20px;margin:0 0 4px}
+.toc ol{margin:0;padding-left:20px;columns:2;column-gap:28px;font-size:14.5px}
+@media(max-width:620px){.toc ol{columns:1}}
+.toc a{text-decoration:none}
+.toc a:hover{text-decoration:underline}
+
+@media print{
+  .hero{background:#0b1a33!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  section{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="tag">SEO audit · oktobar 2026</span>
+    <h1>Zašto sajt ne donosi pozive — i šta se tu može</h1>
+    <div class="dom">stolarija-pvc.rs · Majstor Joca · ALU i PVC stolarija, Voždovac, Beograd</div>
+    <p>Pregled je napravljen na osnovu tehničkog obilaska sajta (Screaming Frog), našeg alata za audit (Parsi) i ručne provere konkurencije u Beogradu.</p>
+    <div class="meta">
+      <span>Strana u obilasku: <b>1</b></span>
+      <span>Tehničkih nalaza: <b>14</b></span>
+      <span>Konkurenti u pregledu: <b>7</b></span>
+      <span>Datum: <b>28.10.2026.</b></span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap" style="padding-top:26px">
+  <nav class="toc">
+    <ol>
+      <li><a href="#rezime">Rezime u jednom pogledu</a></li>
+      <li><a href="#glavno">Glavni problem: ceo sajt je jedna strana</a></li>
+      <li><a href="#konkurencija">Šta rade konkurenti</a></li>
+      <li><a href="#tehnika">Tehnički nalazi</a></li>
+      <li><a href="#semantika">Upiti i struktura koja nedostaje</a></li>
+      <li><a href="#lokalno">Lokalni SEO i Google karta</a></li>
+      <li><a href="#konverzija">Konverzija: gde se gube pozivi</a></li>
+      <li><a href="#plan">Plan rada po mesecima</a></li>
+      <li><a href="#cena">Tim i cena</a></li>
+      <li><a href="#iskreno">Šta ne obećavamo</a></li>
+    </ol>
+  </nav>
+</div>
+
+<!-- ============ REZIME ============ -->
+<section id="rezime">
+  <div class="wrap">
+    <h2>Rezime u jednom pogledu</h2>
+    <p class="sub">Brojevi su iz obilaska sajta od 28.10.2026.</p>
+
+    <div class="cards">
+      <div class="card red"><div class="n">1</div><div class="l">strana na sajtu — sve ostalo su linkovi ka delovima iste strane</div></div>
+      <div class="card red"><div class="n">0</div><div class="l">meta description — Google sam sastavlja tekst u rezultatima</div></div>
+      <div class="card red"><div class="n">12/12</div><div class="l">slika bez <code>alt</code> opisa</div></div>
+      <div class="card amber"><div class="n">22</div><div class="l">znaka u naslovu strane (norma 30–60)</div></div>
+      <div class="card amber"><div class="n">~1 MB</div><div class="l">težina strane pri prvom učitavanju</div></div>
+      <div class="card amber"><div class="n">0</div><div class="l">formi za upit — kontakt je samo telefon i Gmail adresa</div></div>
+    </div>
+
+    <div class="box accent">
+      <h3>Suština</h3>
+      <p style="margin-bottom:0">Sajt je uredan i sadržaj na njemu je dobar — ali je sve smešteno na jednu stranu. Google svakoj strani dodeljuje jednu temu, pa ovaj sajt može da se takmiči za jedan upit, dok konkurenti u Beogradu imaju 30 do 60 strana i takmiče se za stotine upita. Tekst je napisan, slike su tu, ponuda je jasna — nedostaje struktura. To je posao koji se radi jednom i posle toga radi godinama.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GLAVNO ============ -->
+<section id="glavno">
+  <div class="wrap">
+    <h2>Glavni problem: ceo sajt je jedna strana</h2>
+    <p class="sub">Zbog čega je to najvažniji nalaz u ovom auditu</p>
+
+    <p class="lead">Obilazak sajta je našao tačno jednu HTML stranu: <code>https://stolarija-pvc.rs/</code>. Meni u zaglavlju — Usluge, PVC stolarija, ALU stolarija, Svi proizvodi, O nama, Kontakt — vodi na delove te iste strane, a ne na zasebne strane.</p>
+
+    <p>Praktično to znači: čovek koji u Google ukuca <em>„komarnici za prozore Beograd"</em> ili <em>„rolo garažna vrata cena"</em> traži stranu posvećenu tome. Vaš sajt tu temu pokriva u jednom pasusu usred strane o svemu ostalom. Google uporedi to sa konkurentom koji ima celu stranu o komarnicima, sa slikama, cenama i opisima tipova — i rangira konkurenta.</p>
+
+    <div class="box red">
+      <h3>Konkretno, šta se gubi</h3>
+      <ul style="margin-bottom:0">
+        <li><b>PVC prozori, ALU prozori, ulazna vrata, sobna vrata, balkonska vrata, roletne, komarnici, rolo garažna vrata, ALU-drvo, klizni sistemi, zatvaranje terase</b> — jedanaest tema, koje ljudi traže odvojeno, na jednoj strani ne mogu da se rangiraju odvojeno.</li>
+        <li><b>Upiti sa cenom</b> (<em>cena po m2</em>, <em>cenovnik</em>, <em>jednokrilni prozor cena</em>) — kod oba konkurenta koja smo pregledali postoji zasebna strana sa cenama. Na vašem sajtu cena se ne pojavljuje nigde.</li>
+        <li><b>Gradske opštine</b> — Voždovac, Zvezdara, Novi Beograd, Čukarica, Rakovica, Palilula, Zemun. Ljudi traže majstora u svom kraju.</li>
+        <li><b>Servis i popravka stolarije</b> — upiti koje vi već radite, ali se na sajtu ne pominju kao usluga.</li>
+      </ul>
+    </div>
+
+    <p>Druga strana istog problema: strana od <b>242 KB čistog HTML-a</b> i 2.524 reči nosi sve teme zajedno. Alat za čitljivost daje ocenu <b>16,4 (Flesch) — „veoma teško za čitanje"</b>, a odnos teksta i koda je <b>6,98%</b>. Posetilac na telefonu skroluje kroz sve da bi našao svoje. Podela na strane rešava i to.</p>
+  </div>
+</section>
+
+<!-- ============ KONKURENCIJA ============ -->
+<section id="konkurencija">
+  <div class="wrap">
+    <h2>Šta rade konkurenti</h2>
+    <p class="sub">Ručno pregledano 28.10.2026., po upitima „pvc stolarija Beograd" i „alu stolarija Beograd"</p>
+
+    <div class="vs">
+      <div>
+        <h4>stolarija-pvc.rs (vi)</h4>
+        <div class="big">1 strana</div>
+        <ul>
+          <li>bez strane sa cenama</li>
+          <li>bez kalkulatora</li>
+          <li>bez bloga</li>
+          <li>bez galerije radova</li>
+          <li>bez forme za upit</li>
+          <li>bez zasebnih strana po uslugama</li>
+        </ul>
+      </div>
+      <div class="them">
+        <h4>pvcstolarije.rs (Janjić)</h4>
+        <div class="big">60+ strana</div>
+        <ul>
+          <li>strane: PVC prozori, ALU prozori, sobna / ulazna / balkonska / garažna vrata, roletne, komarnici, montaža, RAL montaža, proizvodnja, zidarska obrada</li>
+          <li>cene: <em>/cene/</em>, <em>/pvc-stolarija-cena-po-m2/</em>, cene po tipu prozora</li>
+          <li>galerija, akcija, shop, novosti</li>
+          <li>desetine tekstova: „PVC ili ALU", „zamena prozora u stanu", „šta je RAL montaža", „magljenje stakala"</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="scroll">
+      <table>
+        <tr>
+          <th>Element</th><th>Vi</th><th>pvcstolarije.rs</th><th>pvcstolarija-beograd.rs</th>
+        </tr>
+        <tr><td>Strane u indeksu</td><td><span class="pill crit">1</span></td><td>60+</td><td>30+</td></tr>
+        <tr><td>Cene / cenovnik</td><td><span class="pill crit">nema</span></td><td>3 strane</td><td>6 strana + kalkulator</td></tr>
+        <tr><td>Cena u naslovu u Google-u</td><td><span class="pill crit">nema</span></td><td>da</td><td>„Cene od 80€" u <code>title</code></td></tr>
+        <tr><td>Blog / saveti</td><td><span class="pill crit">nema</span></td><td>30+ tekstova</td><td>blog + enciklopedija + vodič</td></tr>
+        <tr><td>Strana o garanciji</td><td><span class="pill med">pasus u FAQ</span></td><td>zasebna strana</td><td>„Garancija 10 god." u naslovu</td></tr>
+        <tr><td>Forma za upit</td><td><span class="pill crit">nema</span></td><td>da</td><td>da + kalkulator</td></tr>
+        <tr><td>Dokaz posla (brojevi, galerija)</td><td><span class="pill med">3 anonimne recenzije</span></td><td>galerija radova</td><td>„2.400+ kupaca" u naslovu</td></tr>
+      </table>
+    </div>
+
+    <p>Vredi primetiti: <b>pvcstolarija-beograd.rs</b> u naslovu rezultata nosi <em>„REHAU PVC Stolarija Beograd | Cene od 80€"</em>, a u prvom redu strane <em>„Besplatno merenje · Garancija 10 god. · 2.400+ kupaca"</em>. To nije bolji majstor — to je bolje napisan naslov. Vaš naslov u Google-u trenutno glasi <code>Početna - Majstor Joca</code>, bez reči „PVC", „stolarija" ili „Beograd".</p>
+
+    <div class="box">
+      <h3>Šta ovo znači za ponudu</h3>
+      <p style="margin-bottom:0">Konkurenti nisu nedostižni. Nijedan od pregledanih sajtova nema ništa što se ne može napraviti — oni su samo ranije počeli da rade na strukturi i sadržaju. Zaostatak je u broju strana, a ne u kvalitetu posla ili reputaciji.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TEHNIKA ============ -->
+<section id="tehnika">
+  <div class="wrap">
+    <h2>Tehnički nalazi</h2>
+    <p class="sub">Parsi + Screaming Frog, obilazak 28.10.2026. · 14 nalaza po prioritetu</p>
+
+    <div class="scroll">
+      <table>
+        <tr><th>Prioritet</th><th>Nalaz</th><th>Zašto je važno</th></tr>
+
+        <tr>
+          <td><span class="pill crit">kritično</span></td>
+          <td><b>Nema meta description</b><br><code>&lt;meta name="description"&gt;</code> je prazan</td>
+          <td>Google sam sastavlja tekst ispod naslova u rezultatima — obično iseče slučajan pasus. To direktno utiče na to koliko ljudi klikne.</td>
+        </tr>
+
+        <tr>
+          <td><span class="pill crit">kritično</span></td>
+          <td><b>Jezik strane je engleski</b><br><code>&lt;html lang="en-US"&gt;</code> na sajtu na srpskom</td>
+          <td>Google i čitači ekrana dobijaju pogrešan signal o jeziku. Treba <code>sr-RS</code>. Ispravlja se u jednoj liniji koda.</td>
+        </tr>
+
+        <tr>
+          <td><span class="pill crit">kritično</span></td>
+          <td><b>Naslov strane: 22 znaka</b><br><code>Početna - Majstor Joca</code></td>
+          <td>Najjači pojedinačni signal na strani ne sadrži ni „PVC stolarija", ni „ALU", ni „Beograd". Norma je 30–60 znakova.</td>
+        </tr>
+
+        <tr>
+          <td><span class="pill crit">kritično</span></td>
+          <td><b>H1 je „PVC stolarija"</b> (13 znakova), bez grada; H2 ispod nosi punu frazu</td>
+          <td>Glavni naslov strane bi trebalo da nosi uslugu i grad. Sada je obrnuto — slabiji naslov je iznad jačeg.</td>
+        </tr>
+
+        <tr>
+          <td><span class="pill crit">kritično</span></td>
+          <td><b>12 od 12 slika bez <code>alt</code></b></td>
+          <td>Google ne vidi šta je na slici. U ovoj branši pretraga po slikama donosi posetioce — ljudi traže kako izgledaju ulazna vrata ili boje profila.</td>
+        </tr>
+
+        <tr>
+          <td><span class="pill med">srednje</span></td>
+          <td><b>Slike su preuzete sa drugih sajtova</b><br>npr. <code>washington-solid-6-panelled-pvc-white-internal-directdoors.jpg</code>, <code>Sliding-Sash-Windows.jpg</code></td>
+          <td>Imena fajlova pokazuju da su slike iz stranih kataloga. Ne daju prednost u pretrazi, a kupac ne vidi vaš stvarni posao. Sopstvene fotografije rešavaju oba problema.</td>
+        </tr>
+
+        <tr>
+          <td><span class="pill med">srednje</span></td>
+          <td><b>Ostaci šablona u fajlovima</b><br><code>funeral-services-icon-dark-02-1.png</code>, <code>funeral-services-icon-dark-06-1.png</code></td>
+          <td>Ikone na sajtu su iz šablona za pogrebne usluge. Ne vidi se posetiocu, ali pokazuje da sajt nikad nije dovršen do kraja.</td>
+        </tr>
+
+        <tr>
+          <td><span class="pill med">srednje</span></td>
+          <td><b>Težina strane</b><br>242 KB HTML + ~760 KB resursa pri prvom učitavanju</td>
+          <td>Jedna slika je PNG od 127 KB, druga JPG od 76 KB, nijedna nije u WebP formatu i nijedna nije smanjena na stvarnu veličinu prikaza. Na mobilnom internetu to su sekunde čekanja.</td>
+        </tr>
+
+        <tr>
+          <td><span class="pill med">srednje</span></td>
+          <td><b>Tema Divi 4.14.7 i jQuery Migrate</b><br>fajlovi od 2022–2023.</td>
+          <td><code>scripts.min.js</code> je 272 KB, uz jQuery 87 KB i jQuery Migrate 13 KB. Prisustvo Migrate fajla znači da se vuku zastareli dodaci. Tema je tri godine bez ažuriranja — to je i pitanje brzine i pitanje bezbednosti.</td>
+        </tr>
+
+        <tr>
+          <td><span class="pill med">srednje</span></td>
+          <td><b>Odziv servera 0,72 s</b></td>
+          <td>Vreme do prvog bajta. Nije kritično, ali uz tešku stranu daje osetno kašnjenje. Keširanje i gzip/brotli ovo spuštaju ispod 0,3 s.</td>
+        </tr>
+
+        <tr>
+          <td><span class="pill med">srednje</span></td>
+          <td><b>Nema strukturiranih podataka</b><br>Parsi nije našao ni jedan komercijalni element u razmetanju</td>
+          <td>Bez <code>LocalBusiness</code>, <code>Product</code> i <code>FAQPage</code> razmetanja Google ne dobija podatke o radnom vremenu, telefonu, oceni i pitanjima — pa se ne prikazuju u rezultatima. Na sajtu već postoji FAQ sekcija koja je spremna za to.</td>
+        </tr>
+
+        <tr>
+          <td><span class="pill low">nisko</span></td>
+          <td><b>Nema bezbednosnih zaglavlja</b><br>HSTS, CSP, X-Frame-Options, X-Content-Type-Options</td>
+          <td>Ne utiče na pozicije direktno, ali ostavlja sajt otvoren za ugrađivanje u tuđe strane. Dodaje se u konfiguraciji servera.</td>
+        </tr>
+
+        <tr>
+          <td><span class="pill low">nisko</span></td>
+          <td><b>Izlazni link na izvođača</b><br><code>www.oneclickstudio.net</code> u podnožju</td>
+          <td>Jedini spoljni link sa sajta prenosi deo težine na tuđi domen. Rešava se atributom <code>nofollow</code>.</td>
+        </tr>
+
+        <tr>
+          <td><span class="pill low">nisko</span></td>
+          <td><b>Nema <code>hreflang</code></b></td>
+          <td>Bitno samo ako planirate verziju na engleskom ili ruskom. Beležimo za slučaj da to bude u planu.</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="box">
+      <h3>Dobre vesti iz audita</h3>
+      <ul style="margin-bottom:0">
+        <li>HTTPS radi, strana vraća <span class="pill ok">200 OK</span>, nema preusmeravanja u krugu.</li>
+        <li><code>canonical</code> je ispravno postavljen na <code>https://stolarija-pvc.rs/</code>.</li>
+        <li>Strana je otvorena za indeksiranje (<code>index, follow</code>) i nalazi se u sitemap fajlu.</li>
+        <li>Nema duplikata, nema grešaka 404 u obilasku, nema blokiranih resursa.</li>
+        <li>Sadržaj je stvarno napisan — 2.524 reči o profilima, izolaciji, održavanju. To je materijal od kojeg se gradi 20 strana, ne nešto što treba pisati od nule.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEMANTIKA ============ -->
+<section id="semantika">
+  <div class="wrap">
+    <h2>Upiti i struktura koja nedostaje</h2>
+    <p class="sub">Grupe upita po nameri kupca i strana koja im odgovara</p>
+
+    <p>Ovo je okvir, ne konačan spisak. Tačne brojeve pretraga i prioritete vadimo u prvoj nedelji rada iz Google Keyword Planner-a i Search Console-a, pa se plan zaključava na osnovu stvarnih podataka, a ne pretpostavke.</p>
+
+    <div class="kw">
+      <div class="g">
+        <div class="intent">Spreman da kupi</div>
+        <b>Proizvod + grad</b>
+        <ul>
+          <li>pvc stolarija Beograd</li>
+          <li>alu stolarija Beograd</li>
+          <li>pvc prozori Beograd</li>
+          <li>alu prozori Beograd</li>
+          <li>ulazna vrata Beograd</li>
+          <li>rolo garažna vrata Beograd</li>
+        </ul>
+      </div>
+      <div class="g">
+        <div class="intent">Poredi cene</div>
+        <b>Upiti sa cenom</b>
+        <ul>
+          <li>pvc stolarija cene</li>
+          <li>pvc stolarija cena po m2</li>
+          <li>cena ugradnje pvc prozora</li>
+          <li>jednokrilni / dvokrilni prozor cena</li>
+          <li>balkonska vrata cena</li>
+          <li>komarnici cena</li>
+        </ul>
+      </div>
+      <div class="g">
+        <div class="intent">Zna šta hoće</div>
+        <b>Pojedinačni proizvodi</b>
+        <ul>
+          <li>sobna vrata pvc</li>
+          <li>alu ulazna vrata</li>
+          <li>roletne spoljašnje / unutrašnje</li>
+          <li>komarnici rolo / fiksni / za vrata</li>
+          <li>klizni pvc prozori</li>
+          <li>alu-drvo stolarija</li>
+        </ul>
+      </div>
+      <div class="g">
+        <div class="intent">Ima problem</div>
+        <b>Servis i zamena</b>
+        <ul>
+          <li>servis pvc stolarije Beograd</li>
+          <li>popravka pvc prozora</li>
+          <li>zamena stolarije u stanu</li>
+          <li>zamena prozora bez rušenja</li>
+          <li>zatvaranje terase pvc stolarijom</li>
+        </ul>
+      </div>
+      <div class="g">
+        <div class="intent">Traži u svom kraju</div>
+        <b>Opštine</b>
+        <ul>
+          <li>pvc stolarija Voždovac</li>
+          <li>pvc stolarija Zvezdara</li>
+          <li>pvc stolarija Novi Beograd</li>
+          <li>pvc stolarija Čukarica</li>
+          <li>pvc stolarija Rakovica · Palilula · Zemun</li>
+        </ul>
+      </div>
+      <div class="g">
+        <div class="intent">Još bira</div>
+        <b>Saveti i poređenja</b>
+        <ul>
+          <li>pvc ili alu stolarija</li>
+          <li>troslojno ili dvoslojno staklo</li>
+          <li>kada menjati stolariju</li>
+          <li>šta je RAL montaža</li>
+          <li>koliko traje ugradnja</li>
+          <li>kako održavati pvc prozore</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Predložena struktura sajta</h3>
+    <p>Od jedne strane prelazimo na oko 28 strana, u tri faze. Tekst za većinu komercijalnih strana već postoji na sajtu — treba ga razdvojiti, dopuniti i rasporediti.</p>
+
+    <div class="scroll">
+      <table>
+        <tr><th>Faza</th><th>Strane</th><th>Broj</th></tr>
+        <tr>
+          <td><b>1. Komercijalna osnova</b></td>
+          <td>PVC prozori · ALU prozori · PVC vrata · ALU ulazna vrata · Sobna vrata · Balkonska vrata · Roletne · Komarnici · Rolo garažna vrata · Cenovnik · Kontakt · O nama</td>
+          <td>12</td>
+        </tr>
+        <tr>
+          <td><b>2. Dubina i dokaz</b></td>
+          <td>Galerija radova · Garancija · Montaža i RAL montaža · Servis i popravka · Zatvaranje terase · Klizni sistemi · ALU-drvo · Profili (poređenje)</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td><b>3. Kraj i saveti</b></td>
+          <td>4 strane po opštinama (Voždovac, Zvezdara, Novi Beograd, Čukarica) + 4 teksta sa savetima</td>
+          <td>8</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOKALNO ============ -->
+<section id="lokalno">
+  <div class="wrap">
+    <h2>Lokalni SEO i Google karta</h2>
+    <p class="sub">Najbrži izvor poziva u ovoj branši</p>
+
+    <p class="lead">Kada neko u Beogradu traži majstora za stolariju, Google iznad običnih rezultata prikazuje tri firme sa karte, ocenama i brojem telefona. Ti pozivi dolaze pre nego što korisnik uopšte skroluje do sajtova.</p>
+
+    <p>Za ulazak u taj blok nije dovoljan sajt — potreban je uredan Google Business Profile i doslovno isti podaci o firmi svuda na internetu. Na sajtu trenutno stoji samo „Voždovac, Beograd": nema ulice i broja, nema radnog vremena, nema PIB-a ni matičnog broja, a kontakt mejl je lična Gmail adresa (<code>jovica.mirkovski68@gmail.com</code>) umesto adrese na domenu. Svaka od tih stvari je signal po kojem Google procenjuje da li je firma stvarna i da li je ozbiljna.</p>
+
+    <h3>Šta radimo</h3>
+    <ul>
+      <li>Google Business Profile: popunjavamo do kraja — kategorije, zone rada po opštinama, usluge sa opisima, radno vreme, fotografije sa gradilišta, objave svake nedelje.</li>
+      <li>Jedinstveni podaci firme (ime, adresa, telefon) na sajtu, u profilu i u imenicima — slovo po slovo isto.</li>
+      <li>Upis u srpske imenike gde konkurenti već stoje: <b>planplus.rs</b>, <b>navidiku.rs</b>, <b>011info</b>, <b>mojkvart</b>, <b>halooglasi</b>. Ovo ujedno radi i kao prvi sloj linkova.</li>
+      <li>Rad na recenzijama: tri anonimne recenzije na sajtu ne pomažu. Potrebne su prave recenzije u Google profilu — sa fotografijama posla i odgovorom firme na svaku.</li>
+      <li><code>LocalBusiness</code> razmetanje na sajtu, da Google poveže sajt i profil.</li>
+      <li>Mejl na domenu umesto Gmail adrese.</li>
+    </ul>
+
+    <div class="box accent">
+      <p style="margin-bottom:0"><b>Zašto ovo ide prvo:</b> rezultati sa karte se obično vide za 4–8 nedelja, dok organske pozicije za komercijalne upite traže 3–6 meseci. Lokalni deo daje prve pozive dok se gradi ostalo.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KONVERZIJA ============ -->
+<section id="konverzija">
+  <div class="wrap">
+    <h2>Konverzija: gde se gube pozivi</h2>
+    <p class="sub">Posetioci koji već jesu na sajtu, ali ne pozovu</p>
+
+    <div class="two">
+      <div class="box">
+        <h3>Nema forme za upit</h3>
+        <p style="margin-bottom:0">Jedini način da vas neko kontaktira je poziv ili mejl. Deo ljudi gleda sajt uveče ili sa posla i tada ne zove. Forma „pošaljite dimenzije — vraćamo procenu" i dugme za Viber/WhatsApp hvataju te upite. Bez forme se ne može meriti ni odakle dolaze obraćanja.</p>
+      </div>
+      <div class="box">
+        <h3>Garancija piše dva različita roka</h3>
+        <p style="margin-bottom:0">Na vrhu strane: <b>5 godina na okov i profile, 2 na staklo</b>. U FAQ sekciji na istoj strani: <b>10 godina na profile, 2 na okov, 2 na staklo</b>. Kupac koji pročita oba pasusa ne zna čemu da veruje. Treba jedan rok, na jednom mestu, i zasebna strana o garanciji.</p>
+      </div>
+      <div class="box">
+        <h3>Nema cene nigde</h3>
+        <p style="margin-bottom:0">Razumemo da cena zavisi od dimenzija. Ali konkurent sa „od 80€" u naslovu dobija klik, a vi ga ne dobijate. Rešenje je cenovnik sa opsegom „od" po tipu prozora i kalkulator za grubu procenu — bez obavezivanja.</p>
+      </div>
+      <div class="box">
+        <h3>Nema dokaza posla</h3>
+        <p style="margin-bottom:0">Slike na sajtu su iz stranih kataloga, a recenzije su bez imena. Galerija od 20–30 fotografija stvarnih radova po Beogradu radi dvostruko: ubeđuje kupca i donosi posetioce iz pretrage po slikama.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLAN ============ -->
+<section id="plan">
+  <div class="wrap">
+    <h2>Plan rada po mesecima</h2>
+    <p class="sub">Šta se radi i kada se vidi</p>
+
+    <div class="timeline">
+      <div class="tl">
+        <div class="when">Mesec 1 · osnova</div>
+        <h3>Tehnika, merenje i Google profil</h3>
+        <ul>
+          <li>Ispravka svega iz tehničkog spiska: naslov, meta description, <code>lang="sr-RS"</code>, H1, <code>alt</code> na svim slikama, <code>nofollow</code> na izlaznom linku.</li>
+          <li>Search Console i Analytics — postavljanje i merenje ciljeva (poziv, forma, Viber).</li>
+          <li>Ubrzanje: kompresija slika u WebP, keširanje, čišćenje nepotrebnih skriptova, ažuriranje teme.</li>
+          <li>Semantika: izvlačenje stvarnih brojeva pretraga, zaključavanje strukture od 28 strana.</li>
+          <li>Google Business Profile do kraja popunjen, upis u 5 srpskih imenika.</li>
+        </ul>
+      </div>
+
+      <div class="tl">
+        <div class="when">Meseci 2–3 · struktura</div>
+        <h3>12 komercijalnih strana</h3>
+        <ul>
+          <li>Strane po proizvodima: prozori, vrata, roletne, komarnici, garažna vrata — svaka sa svojim naslovom, opisom, slikama i pozivom na akciju.</li>
+          <li>Cenovnik sa opsezima „od" i kalkulator grube procene.</li>
+          <li>Forma za upit + Viber/WhatsApp dugme, strana Kontakt sa kartom i punim podacima firme.</li>
+          <li>Razmetanje: <code>LocalBusiness</code>, <code>Product</code>, <code>FAQPage</code>, <code>BreadcrumbList</code>.</li>
+          <li>Unutrašnje povezivanje strana i meni koji vodi na strane, a ne na delove jedne strane.</li>
+          <li><b>Očekivano:</b> prvi pozivi sa Google karte, prvi prikazi za upite sa cenom.</li>
+        </ul>
+      </div>
+
+      <div class="tl">
+        <div class="when">Meseci 4–6 · dubina</div>
+        <h3>Dokaz, kraj grada, linkovi</h3>
+        <ul>
+          <li>Galerija radova — fotografisanje objekata koje završavate, 20–30 slika sa opisima.</li>
+          <li>Strane: garancija, montaža i RAL montaža, servis i popravka, zatvaranje terase, klizni sistemi, ALU-drvo.</li>
+          <li>Strane po opštinama: Voždovac, Zvezdara, Novi Beograd, Čukarica.</li>
+          <li>Linkovi: imenici, lokalni portali, saradnja sa izvođačima i agencijama za nekretnine.</li>
+          <li>Rad na recenzijama u Google profilu.</li>
+          <li><b>Očekivano:</b> pozicije za glavne komercijalne upite ulaze u prvu stranicu, saobraćaj raste iz više od jednog upita.</li>
+        </ul>
+      </div>
+
+      <div class="tl">
+        <div class="when">Od 7. meseca · rast</div>
+        <h3>Širenje i održavanje</h3>
+        <ul>
+          <li>Tekstovi sa savetima za upite tipa „PVC ili ALU", „troslojno staklo", „kada menjati stolariju".</li>
+          <li>Praćenje konkurencije i doterivanje strana koje su blizu prve trojke.</li>
+          <li>Sezonski rad: komarnici u proleće, zamena stolarije pre zime.</li>
+          <li>Mesečni izveštaj: pozicije, saobraćaj, pozivi, šta je urađeno, šta sledi.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CENA ============ -->
+<section id="cena">
+  <div class="wrap">
+    <h2>Tim i cena</h2>
+    <p class="sub">Šta ulazi u mesečni rad</p>
+
+    <div class="price">
+      <div class="amt">
+        <span class="v">300 €</span>
+        <span class="p">mesečno · bez ugovorne obaveze na godinu</span>
+      </div>
+      <div class="note">Na sajtu radi ceo tim, ne jedan izvođač. Prvi mesec je najgušći — tehnika, semantika i Google profil idu zajedno.</div>
+
+      <div class="incl">
+        <div class="i"><b>Tehnički SEO</b><span>Ispravke na sajtu, brzina, razmetanje, Search Console, praćenje grešaka.</span></div>
+        <div class="i"><b>Sadržaj na srpskom</b><span>Tekstovi za strane piše autor kome je srpski maternji jezik — ne mašinski prevod.</span></div>
+        <div class="i"><b>Lokalni SEO</b><span>Google Business Profile, imenici, recenzije, jedinstveni podaci firme.</span></div>
+        <div class="i"><b>Linkovi</b><span>Imenici, lokalni portali, saradnje. Bez kupovine linkova na berzama.</span></div>
+        <div class="i"><b>Izveštaj svakog meseca</b><span>Pozicije, saobraćaj, obraćanja, urađeno, plan za sledeći mesec.</span></div>
+        <div class="i"><b>Veza sa vama</b><span>Jedan čovek na vezi, odgovor u toku radnog dana, Viber ili telefon.</span></div>
+      </div>
+    </div>
+
+    <div class="two">
+      <div class="box">
+        <h3>Kako se vraća ulaganje</h3>
+        <p style="margin-bottom:0">Zamena stolarije u stanu je posao koji se meri u hiljadama evra. Ako rad na sajtu donese jedan dodatan posao mesečno, ulaganje je pokriveno sa viškom — a sve iznad toga je čista dobit. Zato merimo pozive i upite, a ne samo pozicije: pozicija bez poziva nikome ne znači ništa.</p>
+      </div>
+      <div class="box">
+        <h3>Šta ostaje vaše</h3>
+        <p style="margin-bottom:0">Domen, sajt, Google profil, svi tekstovi i fotografije — sve ostaje registrovano na vas i ostaje vam ako prekinemo saradnju. Pristup nalozima je vaš od prvog dana. Ne radimo na svom domenu i ne držimo sajt kao zalog.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ISKRENO ============ -->
+<section id="iskreno">
+  <div class="wrap">
+    <h2>Šta ne obećavamo</h2>
+    <p class="sub">Da ne bi bilo nerazumevanja na trećem mesecu</p>
+
+    <ul>
+      <li><b>Nema prvog mesta za nedelju dana.</b> Sajt sa jednom stranom ulazi u ozbiljnu konkurenciju iz početka. Prvi pomeraji na karti se vide za 4–8 nedelja, pozicije za komercijalne upite za 3–6 meseci.</li>
+      <li><b>Nema garancije na konkretnu poziciju.</b> Nju ne može dati niko ko zna kako Google radi. Garantujemo obim rada, izveštaj i to da se svaka stavka iz ovog audita zatvori.</li>
+      <li><b>Potrebno je i nešto od vas:</b> pristup sajtu, fotografije završenih radova i odgovor na pitanja o tehnici (profili, staklo, rokovi). Bez vaših fotografija galerija ostaje sa slikama iz kataloga.</li>
+      <li><b>Nećemo kupovati linkove.</b> Jeftini linkovi sa berzi rade kratko, a zatim smanjuju poverenje u domen. Radimo imenike, lokalne portale i saradnje.</li>
+      <li><b>Brojevi u ovom auditu su iz obilaska od 28.10.2026.</b> Spisak upita je okvir — tačni brojevi pretraga se vade u prvoj nedelji rada i plan se po njima koriguje.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap f">
+    <div>
+      <div style="font-weight:700;font-size:17px;margin-bottom:4px">Hvala na vremenu.</div>
+      <p class="small" style="max-width:46ch;margin:0">Spremni smo da prođemo kroz audit zajedno, tačku po tačku, i da počnemo od onoga što najpre donosi pozive.</p>
+    </div>
+    <div class="small">
+      <div>SEO audit · <b>stolarija-pvc.rs</b></div>
+      <div>28.10.2026.</div>
+      <div style="margin-top:8px">Podaci: Screaming Frog SEO Spider, Parsi, ručna provera konkurencije.</div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
